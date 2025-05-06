@@ -31,7 +31,7 @@ function guessingGame() {
   // Generate secret number
   const comGenerateNumber = randGenerator(MAX_NUMBER, MIN_NUMBER);
 
-  let isCorrect = false;
+  let userChoice = null;
   let count = 0;
 
   do {
@@ -39,34 +39,36 @@ function guessingGame() {
       prompt('Please enter your guess between 1 and 10')
     );
 
-    const userChoice = userPropmtChoice ? userPropmtChoice : 'cancel';
-    if (typeof userChoice === 'string') {
-      console.log('User input is unknown. Please start the game again');
-      return;
+    userChoice = userPropmtChoice ? userPropmtChoice : null;
+    if (
+      isNaN(userChoice) ||
+      userChoice < MIN_NUMBER ||
+      userChoice > MAX_NUMBER
+    ) {
+      console.log(
+        `Invalid input! Please enter a number between ${MIN_NUMBER} and ${MAX_NUMBER}.`
+      );
+      continue;
     }
 
     console.log('User Guess: ', userChoice);
 
     if (userChoice === comGenerateNumber) {
-      isCorrect = false;
       console.log(
         'Congrats! You guess is correct ❤️ and your guess is right in ' +
           (count + 1) +
           ' attemps'
       );
     } else if (userChoice > comGenerateNumber) {
-      isCorrect = true;
       count++;
       console.log('Too High! Try again.');
     } else if (userChoice < comGenerateNumber) {
-      isCorrect = true;
       count++;
       console.log('Too Low! Try again.');
     } else {
-      isCorrect = false;
       console.log('Unkhown error happen. Please start the game again');
     }
-  } while (isCorrect);
+  } while (userChoice !== comGenerateNumber);
 
   // check if user want to play again
   const playAgainPrompt = prompt('Do you want to play again (yes/no)');
