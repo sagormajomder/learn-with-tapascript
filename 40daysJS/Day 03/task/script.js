@@ -15,8 +15,8 @@ age >= 18
 
 console.log('');
 
-//=========TASK 3: Driving License =============
-console.log('TASK 3: Driving License');
+//=========TASK 3: Calculate CTC with a Bonus =============
+console.log('TASK 3: Calculate CTC with a Bonus');
 const salary = 12300;
 const anualSalary = salary * 12;
 const bonus = anualSalary * 0.2;
@@ -33,14 +33,16 @@ console.log('');
 
 //=========TASK 5: Electricity Bill Calculator =============
 console.log('TASK 5: Electricity Bill Calculator');
-const units = 5;
-const PER_UNIT_COST = 150;
-const monthlyCost = 5 * 30 * PER_UNIT_COST;
-console.log(`charged per month: ${monthlyCost}`);
+const unitsPerDay = 5;
+const costPerUnit = 150;
+const daysInMonth = 30;
+const monthlyBill = unitsPerDay * daysInMonth * costPerUnit;
+console.log(`charged per month: ${monthlyBill}`);
 
-const yearlyCost = monthlyCost * 12;
-const disCost = yearlyCost - yearlyCost * 0.2;
-console.log(`Annual payment with 20% discount: ${disCost}`);
+const annualBillWithoutDiscount = monthlyBill * 12;
+const discount = annualBillWithoutDiscount * 0.2;
+const annualBillWithDiscount = annualBillWithoutDiscount - discount;
+console.log(`Annual payment with 20% discount: ${annualBillWithDiscount}`);
 
 console.log('');
 
