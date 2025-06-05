@@ -1,0 +1,60 @@
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+#form-container {
+  margin-top: 50px;
+}
+
+#form-el {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: aqua;
+}
+
+#form-el input {
+  margin: 5px;
+}
+
+#form-el [type='submit'] {
+  display: block;
+  margin: 10px auto 0 auto;
+}
+#form-el [type='reset'] {
+  display: block;
+  margin: 10px auto 0 auto;
+}
+/* //////////////////// /////////////////////////////*/
+#table-form input {
+  margin: 10px auto;
+}
+
+#dynamic-table,
+#dynamic-table th,
+#dynamic-table td {
+  text-align: center;
+  width: 100%;
+  border: 1px solid black;
+}
+
+#search-input {
+  margin-bottom: 10px;
+}
+/* ///////////////////////////////////////////////// */
+#theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+}
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+.light-theme {
+  background-color: #fff;
+  color: #000;
+}

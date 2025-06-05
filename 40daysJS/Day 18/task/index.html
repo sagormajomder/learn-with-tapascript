@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Day 18 task</title>
+  </head>
+  <body>
+    <div id="form-container">
+      <p>
+        *** 1. Create a form dynamically using JavaScript and manipulate its
+        behavior ***
+      </p>
+      <button id="btn-form-creation" type="button">Create Form</button>
+      <div id="input-field-creation-container" class="hidden">
+        <p>Which input field you want to create?</p>
+        <button id="btn-text-filed" type="button">Text field</button>
+        <button id="btn-email-filed" type="button">Email field</button>
+        <button id="btn-number-filed" type="button">Number field</button>
+        <button id="btn-password-filed" type="button">Password field</button>
+      </div>
+    </div>
+    <hr />
+    <!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div id="dynamic-table-container">
+      <!-- Create Form -->
+      <p>Enter table info</p>
+      <form id="table-form">
+        <div>
+          <label for="text-name"> Name: </label>
+          <input type="text" id="text-name" name="name" required />
+        </div>
+        <div>
+          <label for="number-age"> Age: </label>
+          <input type="number" id="number-age" name="age" required />
+        </div>
+        <div>
+          <label for="select-role"> Role: </label>
+          <select name="" id="select-rol">
+            <option value="" disabled selected>Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+            <option value="guest">Guest</option>
+          </select>
+        </div>
+        <input type="submit" value="Submit Form" />
+      </form>
+
+      <p>Search Table</p>
+      <input type="text" id="search-input" placeholder="Search by name" />
+    </div>
+    <!-- /////////////////////////////////////////////////////////////// -->
+
+    <button id="theme-toggle">🌙</button>
+  </body>
+</html>
