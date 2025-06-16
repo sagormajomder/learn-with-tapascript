@@ -1,0 +1,19 @@
+.faq__item {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.faq__question {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq__answer {
+  display: none;
+  margin-top: 5px;
+}
+
+.faq__answer.show {
+  display: block;
+}
