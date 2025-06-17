@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./script.js"></script>
+    <title>Day 20</title>
+    <style>
+      .link:link {
+        text-decoration: none;
+        color: #000;
+        display: inline-block;
+        padding: 10px;
+      }
+      li.active .link:link {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      .card {
+        width: 200px;
+        height: 150px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="menu">
+      <li class="active"><a class="link" href="#">Home</a></li>
+      <li><a class="link" href="#">About</a></li>
+      <li><a class="link" href="#">Contact</a></li>
+    </ul>
+
+    <hr />
+
+    <p id="highlight">
+      Lorem ipsum dolor <span>sit amet consectetur adipisicing</span> elit.
+      Dignissimos, quibusdam.
+    </p>
+
+    <hr />
+    <button onclick="resetUl()">Reset Items</button>
+    <button onclick="insertPlainDom(100)">
+      Insert (Plain DOM methods) 100 items
+    </button>
+    <button onclick="insertDocumentFragment(100)">
+      Insert (DocumentFragment) 100 items
+    </button>
+    <ul id="performance"></ul>
+    <hr />
+
+    <div class="card-container">
+      <div class="card">
+        <h2 class="title">Example title 1</h2>
+        <p class="desc">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto,
+          veritatis?
+        </p>
+      </div>
+    </div>
+    <button onclick="createCard(true)">Clone UI</button>
+    <hr />
+
+    <div id="targetDiv">Hello</div>
+    <button onclick="changeDOM()">Change DOM</button>
+  </body>
+</html>
